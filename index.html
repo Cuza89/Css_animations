@@ -1,0 +1,198 @@
+
+<html>
+<head>
+<title>CSS posibilities</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" /> 
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+<link rel="stylesheet" href="animsition.min.css"></link>
+<link rel="stylesheet" href="style.css"></link>
+
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  
+</head>
+
+<body>
+
+<nav>
+	<ul class="animsition">
+		<li><a href="index.html" class="animsition-link" >Home</a></li>
+  
+		<li><a href="index.html" class="animsition-link">About</a></li>
+		<li><a href="index.html" class="animsition-link">Gallery</a></li>
+		<li><a href="index.html" class="animsition-link">Contact</a></li>
+	</ul>
+</nav>
+
+
+<div class="sect sectOne fade-scroll">
+
+<ul class="text-animation hidden fade-scroll">
+	<li>B</li>
+	<li>E</li>
+	<li>A</li>
+	<li>U</li>
+	<li>T</li>
+	<li>I</li>
+	<li>F</li>
+	<li>U</li>
+	<li>L</li>
+	<br>
+	<li>S</li>
+	<li>E</li>
+	<li>R</li>
+	<li>B</li>
+	<li>I</li>
+	<li>A</li>
+</ul>
+
+
+
+</div>
+
+<div class="subSect">
+	<div class="frame1 subSect1 animsition-link">
+		<img src="img/mountains.jpg"/>
+		<div class="front_text">
+			<a href="#"><p>Great mountain peaks</p></a>
+		</div>
+	</div>
+	<div class="frame1 subSect2 animsition-link">
+		<img src="img/rivers.jpg"/>
+		<div class="front_text">
+			<a href="#"><p>Beautiful rivers</p></a>
+		</div>
+	</div>
+	<div class="frame1 subSect3 animsition-link clearfix">
+		<img src="img/castles.jpg"/>
+		<div class="front_text">
+			<a href="#"><p>Medieval castles</p></a>
+		</div>
+	</div>
+		
+</div>
+
+
+<div class="sect sectTwo fade-scroll"  >
+	<div>
+		<h3 class="fade-in" class="fade-scroll">The nature is restless</h3>
+	</div>
+</div>
+
+<div class="sect-thumb subSect sectHalfTwo" >
+
+
+<h1 class="fade-in" >Beautiful destinations</h1>
+
+<div class="thumbnails">
+	<img id="one" src="img/zamak.jpg">
+	
+	<div>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+	</div>
+</div>
+
+<div class="thumbnails">
+	<img id="two" src="img/casa.jpg">
+	<div>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	</div>
+
+</div>
+<div class="thumbnails clearfix">
+
+	<img id="three" src="img/ostrvo.jpg">
+	<div>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	</div></div>
+	
+	
+	
+	
+	
+	
+
+</div>
+
+
+<div class="sect sectThree">
+
+<h1 style="padding:100px; color:white;">There is only life, become restless</h1>
+
+
+
+
+
+</div>
+<div class="subSect footer">
+
+<div class="cube">
+	<img class="front" src="img/c.jpg">
+	<img class="right" src="img/u.jpg">
+	<img class="back" src="img/z.jpg">
+	<img class="left" src="img/a.jpg">
+</div>
+	<div class="reference"><p>Designed and developed by: Marco</p></div>
+</div>
+<script src="js/animsition.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/sliphover/jquery.sliphover.min.js"></script>
+<script src="js/call.js"></script>
+
+<script type="text/javascript">
+/*FADE OUT AND FADE IN MOUSE SCROLL*/
+$(function(){
+
+var documentEl = $(document),
+fadeElem = $('.fade-scroll');
+
+	documentEl.on('scroll', function(){
+	var currScrollPos = documentEl.scrollTop();
+
+		fadeElem.each(function(){
+		var $this = $(this),
+		elemOffsetTop = $this.offset().top;
+			
+if(currScrollPos > elemOffsetTop){
+			$this.css('opacity',1-(currScrollPos-elemOffsetTop)/700);
+				console.log($this);
+			
+			if($this[0].classList[1]=='sectTwo'){
+				
+				var d = document.getElementsByClassName("fade-in");
+				
+					for(var i=0;i<d.length;i++){
+					d[i].classList.add("fade-in-h3");
+					
+					}
+				
+				}
+				
+			}
+		});
+	});
+
+});
+
+	
+</script>
+<script type="text/javascript">
+
+$(function(){
+setTimeout(function(){
+$('.text-animation').removeClass("hidden");
+},300);
+
+});
+
+</script>
+
+</body>
+
+
+
+</html>
